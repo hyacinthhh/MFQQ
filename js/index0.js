@@ -1,11 +1,11 @@
-	var backgroundImg = new Image();//±³¾°Í¼   
-    var maleQQImg = new Image();//¹«Æó¶ì
-	var femaleQQImg= new Image();//Ä¸Æó¶ì
-	//var starImg=new Image(); //½±Æ·ÐÇÐÇ
+	var backgroundImg = new Image();//ï¿½ï¿½ï¿½ï¿½Í¼   
+    var maleQQImg = new Image();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	var femaleQQImg= new Image();//Ä¸ï¿½ï¿½ï¿½ï¿½
+	var starImg=new Image(); //ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 	
-    var ctx;//2d»­²¼   
-    var screenWidth;//»­²¼¿í¶È   
-    var screenHeight;//»­²¼¸ß¶È   
+    var ctx;//2dï¿½ï¿½ï¿½ï¿½   
+    var screenWidth;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   
+    var screenHeight;//ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½   
 	
 	var speed =2;
 	var angle =2;
@@ -13,7 +13,7 @@
 	var verticalSpeed= -speed;
 	
        
-    //¹«ÓÃ ¶¨ÒåÒ»¸öÓÎÏ·ÎïÌåÏ·¶ÔÏó   
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½   
     function GameObject()   
     {   
         this.x = 0;   
@@ -21,28 +21,28 @@
         this.image = null;   
     }   
        
-    //¶¨Òå¹«Æó¶ìMaleQQºÍÄ¸Æó¶ìFamaleQQ¼Ì³ÐÓÎÏ·¶ÔÏóGameObject   
+    //ï¿½ï¿½ï¿½å¹«ï¿½ï¿½ï¿½ï¿½MaleQQï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½FamaleQQï¿½Ì³ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½GameObject   
     function MaleQQ() {};   
-    MaleQQ.prototype = new GameObject();//ÓÎÏ·¶ÔÏóGameObject   
+    MaleQQ.prototype = new GameObject();//ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½GameObject   
 	function FemaleQQ() {};
 	FemaleQQ.prototype = new GameObject();
-	FemaleQQ.prototype.angle=0;//¸Ä±äÄ¸Æó¶ìµÄÐý×ª½Ç¶È
+	FemaleQQ.prototype.angle=0;//ï¿½Ä±ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½Ç¶ï¿½
 	
-	//¶¨Òå½±Æ·Êý×éPrizesºÍ¶ÔÏóPrize£¬¼Ì³ÐÓÎÏ·¶ÔÏóGameObject
-	/*var prizes=new Array();
+	//ï¿½ï¿½ï¿½å½±Æ·ï¿½ï¿½ï¿½ï¿½Prizesï¿½Í¶ï¿½ï¿½ï¿½Prizeï¿½ï¿½ï¿½Ì³ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½GameObject
+	var prizes=new Array();
 	function Prize() {};
 	Prize.prototype=new GameObject();
 	Prize.prototype.row=0;
 	Prize.prototype.col=0;
-	prize.prototype.hit=false;*/
+	prize.prototype.hit=false;
 	
        
-    //ÊµÀý»¯¶ÔÏó  
+    //Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
     var maleQQ = new MaleQQ();   
 	var femaleQQ = new FemaleQQ();
-    //Ñ­»·Ãè»æÎïÌå   
+    //Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   
 	
-	//Åöµ½±ß½çµÄ´¦Àíº¯Êý
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	function HasHitEdge()
 	{
 		if(femaleQQ.x>screenWidth-femaleQQ.image.width)
@@ -71,20 +71,20 @@
 		}
 	}
 	
-	//·½·¨ÓÃÍ¾£º¼ì²â2¸öÎïÌåÊÇ·ñÅö×²   
-	//²ÎÊýobject1£ºÎïÌå1   
-	//²ÎÊýobject1£ºÎïÌå2   
-	//²ÎÊýoverlap£º¿ÉÖØµþµÄÇøÓòÖµ   
-	//·µ»Ø²¼¶ûÖµ£ºÅö×²·µ»Øtrue£¬²»Åö×²·µ»Øfalse   
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½×²   
+	//ï¿½ï¿½ï¿½ï¿½object1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1   
+	//ï¿½ï¿½ï¿½ï¿½object1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2   
+	//ï¿½ï¿½ï¿½ï¿½overlapï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ   
+	//ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½false   
 	function CheckIntersect(object1, object2, overlap)   
 	{   
-		//    x-Öá                      x-Öá   
+		//    x-ï¿½ï¿½                      x-ï¿½ï¿½   
 		//  A1------>B1 C1              A2------>B2 C2   
 		//  +--------+   ^              +--------+   ^   
-		//  | object1|   | y-Öá         | object2|   | y-Öá   
+		//  | object1|   | y-ï¿½ï¿½         | object2|   | y-ï¿½ï¿½   
 		//  |        |   |              |        |   |   
 		//  +--------+  D1              +--------+  D2   
-		//  ¿´Í¼¿ÉÖªÁ½ÎïÌå¸÷4¸öµãµÄÎ»ÖÃ   
+		//  ï¿½ï¿½Í¼ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½   
 		A1 = object1.x + overlap;   
 		B1 = object1.x + object1.image.width - overlap;   
 		C1 = object1.y + overlap;   
@@ -95,47 +95,47 @@
 		C2 = object2.y + overlap;   
 		D2 = object2.y + object2.image.width - overlap;   
 		
-		//¼ÙÈçËûÃÇÔÚx-ÖáÖØµþ   
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½x-ï¿½ï¿½ï¿½Øµï¿½   
 		if(A1 > A2 && A1 < B2   
 		   || B1 > A2 && B1 < B2)   
 		{   
-			//ÅÐ¶Ïy-ÖáÖØµþ   
+			//ï¿½Ð¶ï¿½y-ï¿½ï¿½ï¿½Øµï¿½   
 			if(C1 > C2 && C1 < D1   
 		   || D1 > C2 && D1 < D2)   
 			{   
-				//Åö×²   
+				//ï¿½ï¿½×²   
 				return true;   
 			}   
 		}   
 		return false;   
 	}  
 	
-	//Åö×²·¢ÉúÊ±¼äÒÔ¼°´¦Àí
+	//ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	function HasHitMaleQQ()
 	{
 			if(CheckIntersect(femaleQQ,maleQQ,5))
 			{	
 				if((femaleQQ.x+femaleQQ.width/2)<(maleQQ.x+maleQQ.image.width*0.25))
 				{
-					horizontalSpeed=-speed;//×óÏÂ·½£¬ËÙ¶È·´Ïò
+					horizontalSpeed=-speed;//ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Ù¶È·ï¿½ï¿½ï¿½
 				}
 				else if ((femaleQQ.x+femaleQQ.image.width/2)<(maleQQ.x+maleQQ.image.width*0.5))
 				{
-					horizontalSpeed=-speed/2;//×óÉÏ·½£¬ËÙ¶È·´µ¯¼õ°ë
+					horizontalSpeed=-speed/2;//ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ù¶È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				}
 				else if((femaleQQ.x+femaleQQ.image.width/2)<(maleQQ.x+maleQQ.image.width*0.75))
 				{
-					horizontalSpeed=speed/2;//ÓÒÉÏ·½£¬ËÙ¶È¼õ°ë
+					horizontalSpeed=speed/2;//ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ù¶È¼ï¿½ï¿½ï¿½
 				}
 				else
 				{
-					horizontalSpeed=speed;//ÓÒÏÂ·½£¬ËÙ¶È·´Ïò
+					horizontalSpeed=speed;//ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Ù¶È·ï¿½ï¿½ï¿½
 				}
 				verticalSpeed=-speed;
 			}
 	}
 	
-	//×²µ½½±Æ·
+	//×²ï¿½ï¿½ï¿½ï¿½Æ·
 	/*function HasHitPrize()
 	{
 		for(var x=0;x<prizes.length;x++)
@@ -150,9 +150,9 @@
 				}
 			}
 		}
-	}
+	}*/
 	
-	//´´½¨½±Æ·Êý×é
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 	function InitPrizes()
 	{
 		var count=0;
@@ -172,30 +172,30 @@
 		}
 	}
 	
-	//»æÖÆ½±Æ·
+	//ï¿½ï¿½ï¿½Æ½ï¿½Æ·
 	function DrawPrizes()
 	{
 		for(var x=0;x<prizes.length;x++)
 		{
 			currentPrize=prizes[x];
-			if(!currentPrize.hit)
-			{
+		//	if(!currentPrize.hit)
+		//	{
 				ctx.drawImage(currentPrize.image,prizes[x].x,prizes[x].y);
-			}
-		}
-	}*/
+		//	}
+		//}
+	}
 
     function gameLoop()   
     {   
-        //Çå³ýÆÁÄ»   
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»   
         ctx.clearRect(0, 0, screenWidth, screenHeight);   
         ctx.save();   
-        //»æÖÆ±³¾°   
+        //ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½   
         ctx.drawImage(backgroundImg, 0, 0);   
-        //»æÖÆ¹«Æó¶ì 
+        //ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½ 
         ctx.drawImage(maleQQ.image, maleQQ.x, maleQQ.y);   
-		//»æÖÆÄ¸Æó¶ì
-		//DrawPrizes();//»æÖÆ½±Æ·
+		//ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½
+		//DrawPrizes();//ï¿½ï¿½ï¿½Æ½ï¿½Æ·
 		
 		femaleQQ.x+=horizontalSpeed;
 		femaleQQ.y+=verticalSpeed;
@@ -208,7 +208,7 @@
 		HasHitMaleQQ();
 		//HasHitPrize();
         }   
-    //¼ÓÔØÍ¼Æ¬   
+    //ï¿½ï¿½ï¿½ï¿½Í¼Æ¬   
     function loadImages()   
     {   
         maleQQImg.src = "images/mq.png"; 
@@ -225,18 +225,18 @@
 			maleQQ.x=e.pageX-(maleQQ.image.width/2);
 		});
 	}
-    //³õÊ¼»¯   
+    //ï¿½ï¿½Ê¼ï¿½ï¿½   
     $(window).ready(function(){   
-		addEventHandlers();//¼ÓÉÏÊÂ¼þ´¦Àí
+		addEventHandlers();//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
         loadImages();           
-        ctx = document.getElementById('canvas').getContext('2d'); //»ñÈ¡2d»­²¼      
-        screenWidth = parseInt($("#canvas").attr("width")); //»­²¼¿í¶È 
+        ctx = document.getElementById('canvas').getContext('2d'); //ï¿½ï¿½È¡2dï¿½ï¿½ï¿½ï¿½      
+        screenWidth = parseInt($("#canvas").attr("width")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
         screenHeight = parseInt($("#canvas").attr("height"));   
           
-        maleQQ.x = parseInt(screenWidth/2);// ¹«Æó¶ìX×ø±ê  
-        maleQQ.y = screenHeight - 40;//¹«Æó¶ìY×ø±ê
+        maleQQ.x = parseInt(screenWidth/2);// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½  
+        maleQQ.y = screenHeight - 40;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Yï¿½ï¿½ï¿½ï¿½
 		
-		//³õÊ¼»¯Ä¸Æó¶ì
+		//ï¿½ï¿½Ê¼ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½
 		femaleQQ.x=parseInt(screenWidth/2);
 		femaleQQ.y=parseInt(screenHeight/2);
 		//InitPrizes();
